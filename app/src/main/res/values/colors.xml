@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="numbers_activity">#FD8E09</color>
+    <color name="family_activity">#379237</color>
+    <color name="color_activity">#8800A0</color>
+    <color name="phrases_activity">#16AFCA</color>
 </resources>

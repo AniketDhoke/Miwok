@@ -16,12 +16,18 @@ public class Main2Activity extends AppCompatActivity {
 
         private String mDefaultLang;
         private String miwokLang;
-        private int mImageResources;
+        private int mImageResources = NO_IMAGE_PROVIDED;
+        final static int NO_IMAGE_PROVIDED = -1;
 
         public Word(String mDefaultLang, String miwokLang, int mImageResources) {
             this.mDefaultLang = mDefaultLang;
             this.miwokLang = miwokLang;
             this.mImageResources = mImageResources;
+        }
+
+        public Word(String mDefaultLang, String miwokLang) {
+            this.mDefaultLang = mDefaultLang;
+            this.miwokLang = miwokLang;
         }
 
         public String getmDefaultLang() {
@@ -46,6 +52,10 @@ public class Main2Activity extends AppCompatActivity {
 
         public void setmImageResources(int mImageResources) {
             this.mImageResources = mImageResources;
+        }
+
+        public boolean hasImage(){
+            return mImageResources != NO_IMAGE_PROVIDED;
         }
     }
 }

@@ -10,6 +10,8 @@ import java.util.ArrayList;
 public class numbers_activity extends AppCompatActivity {
 
 
+    ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,9 +29,9 @@ public class numbers_activity extends AppCompatActivity {
         arrayList.add(new Main2Activity.Word("wo'e","nine",R.mipmap.number_nine));
         arrayList.add(new Main2Activity.Word("na'aacha","ten",R.mipmap.number_ten));
 
-        MyAdapter1 myAdapter = new MyAdapter1(this,R.layout.activity_numbers,arrayList);
+        MyAdapter1 myAdapter = new MyAdapter1(this,R.layout.activity_numbers,arrayList,R.color.numbers_activity);
 
-        ListView listView = (ListView) findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(myAdapter);
     }
 }

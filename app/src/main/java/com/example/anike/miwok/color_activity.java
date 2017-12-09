@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public class color_activity extends AppCompatActivity {
 
+    ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +25,9 @@ public class color_activity extends AppCompatActivity {
         arrayList.add(new Main2Activity.Word("topiise","dusty yellow",R.mipmap.color_dusty_yellow));
         arrayList.add(new Main2Activity.Word("chiwiite","mustard yellow",R.mipmap.color_mustard_yellow));
 
-        MyAdapter2 myAdapter = new MyAdapter2(this,R.layout.activity_numbers,arrayList);
+        MyAdapter1 myAdapter = new MyAdapter1(this,R.layout.activity_numbers,arrayList,R.color.color_activity);
 
-        ListView listView = (ListView) findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(myAdapter);
     }
 }

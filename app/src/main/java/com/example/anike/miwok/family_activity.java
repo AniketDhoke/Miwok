@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public class family_activity extends AppCompatActivity {
 
+    ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,9 +27,9 @@ public class family_activity extends AppCompatActivity {
         arrayList.add(new Main2Activity.Word("ama","grandmother",R.mipmap.family_grandmother));
         arrayList.add(new Main2Activity.Word("pappa","grandfather",R.mipmap.family_grandfather));
 
-        MyAdapter3 myAdapter = new MyAdapter3(this,R.layout.activity_family,arrayList);
+        MyAdapter1 myAdapter = new MyAdapter1(this,R.layout.activity_numbers,arrayList,R.color.family_activity);
 
-        ListView listView = (ListView) findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(myAdapter);
 
     }
